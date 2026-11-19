@@ -1,0 +1,14 @@
+[{
+  "relation": [
+    "delegate_permission/common.handle_all_urls",
+    "delegate_permission/common.get_login_creds"
+  ],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "dev.de4araujo.zoji",
+    "sha256_cert_fingerprints": [
+      "01:E8:E7:4B:EC:EB:00:E0:6F:99:35:45:82:18:28:D5:F5:7A:CC:6C:7D:6F:8A:96:88:12:50:32:92:68:8F:DC",
+      "EE:A5:B0:E2:19:88:3C:CC:E2:E5:B5:1D:DF:57:A1:5A:BD:DC:B5:10:8E:CA:50:BE:C6:5E:EF:AE:0B:71:E8:9A"
+    ]
+  }
+}]

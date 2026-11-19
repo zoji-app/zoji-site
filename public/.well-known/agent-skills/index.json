@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "connect-to-zoji",
+      "type": "skill-md",
+      "description": "Conectar um agente de IA à conta de um usuário do Zoji (OAuth 2.1 + PKCE) e ler contatos, conversas e grupos, enviar mensagens individuais ou em grupo (com confirmação em 2 passos) ou definir o status, via MCP.",
+      "url": "https://zoji.app/skills/connect-to-zoji.md",
+      "digest": "sha256:dd98faccf83a4dbfbc3cc98239b564c37ebbb4de3923c96986a1e1faf3120bc4"
+    }
+  ]
+}

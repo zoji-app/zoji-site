@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["AU826CMMKA.dev.de4araujo.zoji"],
+        "components": [
+          {
+            "/": "/add-contact*",
+            "comment": "QR code contact sharing"
+          },
+          {
+            "/": "/oauth/authorize*",
+            "comment": "Aprovação de conexão MCP direto pelo app, sem OTP"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+# Zoji
+
+> Zoji é um aplicativo de mensagens (iOS e Android) para conversar apenas com emojis — sem texto longo, rápido e expressivo.
+
+Zoji encontra seus contatos automaticamente pela agenda, entrega mensagens em tempo real via WebSocket, tem modo de consentimento e bloqueio de contatos, e interface em Português, Inglês e Espanhol. É gratuito.
+
+## Links
+
+- [App Store](https://apps.apple.com/br/app/zoji/id6762674303): download para iOS (16+)
+- [Google Play](https://play.google.com/store/apps/details?id=dev.de4araujo.zoji): download para Android (8.0+)
+- [Termos de Uso](https://zoji.app/terms)
+- [Política de Privacidade](https://zoji.app/privacy)
+- [Adicionar contato via QR code](https://zoji.app/add-contact)
+
+## Agentes de IA
+
+Um agente de IA pode se conectar à conta de um usuário por OAuth 2.1 + PKCE (token escopado e revogável) e usar o servidor MCP do Zoji.
+
+- [auth.md](https://zoji.app/auth.md): fluxo OAuth completo, escopos e tools
+- [Skill connect-to-zoji](https://zoji.app/skills/connect-to-zoji.md): instruções de uso para agentes
+- Servidor MCP (Streamable HTTP): https://mcp.zoji.app/mcp
+- Escopos: `contacts:read`, `messages:read`, `messages:send`, `groups:read`, `groups:send`, `status:write`
+- Tools: `list_contacts`, `search_contact`, `get_friends_status`, `get_conversation`, `prepare_message`, `send_message`, `list_groups`, `get_group_conversation`, `prepare_group_message`, `send_group_message`, `set_status`, `clear_status`
+- Toda mensagem enviada por agente exige confirmação humana em 2 passos (`prepare_*` → `send_*`)
+- [Status dos serviços](https://zoji.app/status)
+
+## Contato
+
+- E-mail: contato@zoji.app
+- Desenvolvido por [deAraujo.dev.br](https://deAraujo.dev.br)

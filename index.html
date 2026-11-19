@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zoji — Converse só com emojis. O jeito mais divertido e expressivo de se comunicar." />
+    <link rel="canonical" href="https://zoji.app/" />
+
+    <!-- Preload do logo (elemento LCP) para descoberta antecipada -->
+    <link rel="preload" as="image" href="/logo.png" fetchpriority="high" />
+
+    <!-- Fontes carregadas sem bloquear a renderização -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Inter:wght@400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Inter:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zoji.app/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Zoji" />
+    <meta property="og:title" content="Zoji — Fale com emojis" />
+    <meta property="og:description" content="Converse com seus amigos usando apenas emojis. Disponível para iOS e Android." />
+    <meta property="og:image" content="https://zoji.app/logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Zoji — Fale com emojis" />
+    <meta name="twitter:description" content="Converse com seus amigos usando apenas emojis. Disponível para iOS e Android." />
+    <meta name="twitter:image" content="https://zoji.app/logo.png" />
+    <!-- Sem <title> estático aqui de propósito — cada página define o seu via
+         React 19 (elemento <title> hoistado pro <head>, ver App.tsx/pages/*).
+         Duas tags <title> coexistindo (uma daqui + uma do React) deixava
+         document.title vazio sempre que os textos não batiam (achado em
+         teste manual: Termos/Privacidade/Aviso ficavam com aba sem título). -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-77G0C2YGHV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // Sem esse consent default, o gtag.js retém o hit de coleta indefinidamente
+      // (nunca chega a sair pra google-analytics.com) — achado real (22/09/2026):
+      // dataLayer mostrava o page_view enfileirado certinho, mas nenhuma requisição
+      // de coleta era disparada, zerando os relatórios mesmo com acessos reais.
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'granted',
+      });
+      // page_view é disparado manualmente pelo app a cada troca de rota (ver src/lib/gtag.ts),
+      // já que isso é uma SPA e o pageview automático do gtag.js só cobre o load inicial.
+      gtag('config', 'G-77G0C2YGHV', { send_page_view: false });
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Zoji",
+        "url": "https://zoji.app/",
+        "description": "Aplicativo de mensagens para conversar apenas com emojis, disponível para iOS e Android.",
+        "image": "https://zoji.app/logo.png",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "iOS 16+, Android 8.0+",
+        "inLanguage": ["pt-BR", "en", "es"],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        },
+        "downloadUrl": [
+          "https://apps.apple.com/br/app/zoji/id6762674303",
+          "https://play.google.com/store/apps/details?id=dev.de4araujo.zoji"
+        ],
+        "sameAs": [
+          "https://apps.apple.com/br/app/zoji/id6762674303",
+          "https://play.google.com/store/apps/details?id=dev.de4araujo.zoji"
+        ],
+        "author": {
+          "@type": "Organization",
+          "name": "deAraujo.dev.br",
+          "url": "https://deAraujo.dev.br"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

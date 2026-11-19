@@ -1,0 +1,3 @@
+# Falsos positivos conhecidos do gitleaks (formato: arquivo:regra:linha).
+# Exemplo de token truncado ("eyJhbGciOiJIUzI1NiIs...") na documentação OAuth.
+public/auth.md:generic-api-key:74
